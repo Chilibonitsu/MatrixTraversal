@@ -605,18 +605,15 @@ section '.data' data readable writeable
 	targetx dd 0 ; переменные для сравнения в цикле, статичные
 	targety dd 0 ; 
 	answer dd 0 ; для результата
-	
-	
+		
 	emptystring db '', 13, 10, 0
 	counter dd 0
 	targetcounter dd 0
 	temp_offset dd 0
-	
-	
+		
 	string db 'prohod: = %X,%X,%X', 13, 10 ,0
 	shellf db 'shell: = %X,%X,%X', 13, 10, 0; для вывода
 	stringf db 'Result = %d (1-YES, 0-NO)', 13, 10, 0
-
 	
 	mass dd 011111b,\
 		    010001b,\; исходная матрица
@@ -627,8 +624,6 @@ section '.data' data readable writeable
 	len = $ - mass
 	ccl = len/4
 
-	
-	
 	row dd 6 ; количество столбцов
 	;row = mass.pole
 	offset dd ccl ; количество строк
